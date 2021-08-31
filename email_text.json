@@ -1,0 +1,21 @@
+{
+"valid":{
+    "attachment":{
+        "subject":"Subject",
+        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the attachment and fill out the last 3 columns (or whatever it is)}</br></html>"
+        },
+    "no-attachment":{
+        "subject":"Subject",
+        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the following:<br/></br>{table}</br></html>"
+        }
+},
+"blank":{
+    "attachment":{
+        "subject":"Subject",
+        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the attachment and fill out the last 3 columns (or whatever it is)}</br></html>"
+        },
+    "no-attachment":{
+        "subject":"Subject",
+        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the following:<br/></br>{table}</br></html>"
+        }
+}}
