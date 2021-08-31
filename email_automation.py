@@ -17,7 +17,7 @@ def create_mail(text, recipient_name, data, subject, recipient_email, attachment
     outlook = win32.Dispatch('outlook.application')
     mail = outlook.CreateItem(0)
     mail.To = recipient_email
-    mail.CC = 'janelle.tang@au.ey.com'
+    mail.CC = 'email@email.com'
     mail.Subject = subject
     recipient_name = recipient_name.replace('-',' ').title() 
     text = text.replace('{name}',recipient_name) # Add name to Email body
