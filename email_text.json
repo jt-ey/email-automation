@@ -1,21 +1,46 @@
 {
-"valid":{
+"interactive-logon":{
     "attachment":{
-        "subject":"Subject",
-        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the attachment and fill out the last 3 columns (or whatever it is)}</br></html>"
+        "subject":"[Important] Service Account Remediation | Interactive Logon Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts with interactive logon enabled where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>attached</b> service accounts which appear to be owned by you, that have interactive logon enabled. For clarification, we consider interactive logon enabled when the following are not explicity configured:<ul><li>Account logon locally denied</li><li>Account logon over RDP denied</li></ul><b>Action Required:</b><ol><li>Please confirm if interactive logon is required to be enabled for these accounts.</li><li>If so, please provide the reasons for this requirement and an ISEN reference in the columns provided (highlighted in yellow)</li></ol>It's appreciated if you could respond COB {future date} and please let us know if you have any questions or concerns.</html>",
+        "columns":"Service Account Still Required? (Y/N), Interactive Longon Required? (Y/N), ISEN Ref #, Remarks (if any)"
         },
     "no-attachment":{
-        "subject":"Subject",
-        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the following:<br/></br>{table}</br></html>"
+        "subject":"[Important] Service Account Remediation | Interactive Logon Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts with interactive logon enabled where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>attached</b> service accounts which appear to be owned by you, that have interactive logon enabled. For clarification, we consider interactive logon enabled when the following are not explicity configured:<ul><li>Account logon locally denied</li><li>Account logon over RDP denied</li></ul><b>Action Required:</b><ol><li>Please confirm if interactive logon is required to be enabled for these accounts.</li><li>If so, please provide the reasons for this requirement and an ISEN reference in the columns provided (highlighted in yellow)</li></ol><br/>{table}<br/><br/>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>"
         }
-},
-"blank":{
+    },
+"description-app":{
     "attachment":{
-        "subject":"Subject",
-        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the attachment and fill out the last 3 columns (or whatever it is)}</br></html>"
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>attached</b> service accounts which are listed as not having an owner, but appear to be linked to the <b style='color:red'>{application}</b> application. Since you are listed as the owner/delegate for this application, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow attached</li></ol>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>",
+        "columns":"Service Account Still Required? (Y/N), Updated Owner Name, Updated Owner Employee ID, Remarks (if any)"
         },
     "no-attachment":{
-        "subject":"Subject",
-        "body":"<html>Dear {name},<br/><br/>Some message here. Please review the following:<br/></br>{table}</br></html>"
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>following</b> service accounts which are listed as not having an owner, but appear to be linked to the <b style='color:red'>{application}</b> application. Since you are listed as the owner/delegate for this application, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow below</li></ol><br/>{table}<br/><br/>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>"
         }
-}}
+    },
+"description-loc":{
+    "attachment":{
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>attached</b> service accounts which are listed as not having an owner, but appear to be used in <b style='color:red'>{location}</b>. As you are the head of technology for this location, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow attached</li></ol>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>",
+        "columns":"Service Account Still Required? (Y/N), Updated Owner Name, Updated Owner Employee ID, Remarks (if any)"
+        },
+    "no-attachment":{
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>following</b> service accounts which are listed as not having an owner, but appear to be used in <b style='color:red'>{location}</b>. As you are the head of technology for this location, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow below</li></ol><br/>{table}<br/><br/>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>"
+        }
+    },
+"default":{
+    "attachment":{
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>attached</b> service accounts which are listed as not having an owner. As you are <b style='color:red'>to fill</b>, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow attached</li></ol>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>",
+        "columns":"Service Account Still Required? (Y/N), Updated Owner Name, Updated Owner Employee ID, Remarks (if any)"
+        },
+    "no-attachment":{
+        "subject":"[Important] Service Account Remediation | Account Owner Confirmation Required",
+        "body":"<html>Hi {name},<br/><br/>As part of continued efforts to reduce risk to the Bank, we are perfoming remediation activities around service accounts in Active Directory. Part of the scope of work is to identify and remediate service accounts where a valid ISEN as per IAM standards is not available. <br/><br/>Based on our analysis, we have identified the <b>following</b> service accounts which are listed as not having an owner. As you are <b style='color:red'>to fill</b>, we are reaching out to you. <br/><br/><b>Action Required:</b><ol><li>Please confirm if you are the correct owner for the service accounts attached</li><li>Please include any remarks you may have in the columns highlighted in yellow below</li></ol><br/>{table}<br/><br/>It's appreciated if you could respond <b>COB {future date}</b> and please let us know if you have any questions or concerns.</html>"
+        }
+    }
+}
